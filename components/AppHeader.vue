@@ -276,16 +276,27 @@ header {
           position: fixed;
           top: 0;
           left: 0;
-          width: 100vw;
-          height: 100vh;
+          right: 0;
+          bottom: 0;
+          //width: 100vw;
+          //height: 100vh;
           z-index: 16;
           transform: none;
           transition all .45s ease-out
           background: linear-gradient(0, #111630, #000, #11162F);
+          overflow: hidden;
           .nav {
             display: flex;
             flex-direction: column;
             font-size: 24px;
+            width: 100%;
+            align-items: center;
+            justify-content: flex-end;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 150px;
           }
         }
       }

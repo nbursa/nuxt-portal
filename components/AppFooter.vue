@@ -8,16 +8,16 @@
           @mouseover.native="linkOver",
           @mouseleave.native="linkLeave"
         ) nenadbursac.com
-    .weather-container-small
-      .button.openpop(
-        v-if="weather",
-        @click="toggleWeather",
-        @mouseover="linkOver",
-        @mouseleave="linkLeave"
-      )
-        span(v-if="fontSize > 37") {{$translation('footer.weather_prefix')}}
-        span {{$translation('footer.weather')}}
-    weather(v-if="!weather && !isWeatherRoute" @linkOver="linkOver" @linkLeave="linkLeave")
+    //.weather-container-small
+    //  .button.openpop(
+    //    v-if="weather",
+    //    @click="toggleWeather",
+    //    @mouseover="linkOver",
+    //    @mouseleave="linkLeave"
+    //  )
+    //    span(v-if="fontSize > 37") {{$translation('footer.weather_prefix')}}
+    //    span {{$translation('footer.weather')}}
+    //weather(v-if="!weather && !isWeatherRoute" @linkOver="linkOver" @linkLeave="linkLeave")
     .social-share
       ul
         span {{$translation('footer.share')}}:

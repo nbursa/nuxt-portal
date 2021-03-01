@@ -126,6 +126,8 @@ export default {
     cursor none
     margin 0
     margin-left auto
+    @media (max-width 550px)
+      padding 10px 10vw
   @media screen and (max-width 550px)
     width 90%
     margin-top 100px
@@ -137,7 +139,7 @@ export default {
       margin-bottom 7vw
       a
         border 2px solid
-        padding .5vw 10vw
+        padding 10px 10vw
       h2
         font-size 2.5rem
         margin-bottom 7vw
@@ -146,5 +148,5 @@ export default {
       @media screen and (max-width 550px)
         font-size 1.4em
         max-width 100%
-        padding 2vw 10vw
+        padding 10px 10vw
 </style>
