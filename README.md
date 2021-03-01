@@ -1,4 +1,4 @@
-# baby-app
+# nuxt-portal
 
 ## Build Setup
 
