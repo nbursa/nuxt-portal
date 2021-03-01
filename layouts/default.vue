@@ -138,7 +138,7 @@ export default {
         // eslint-disable-next-line no-undef
         this.recognition = new webkitSpeechRecognition()
       } else {
-        return console.log('No speech recognition found in navigator.')
+        throw new Error('No speech recognition found in navigator.')
       }
       this.recognition.lang = 'sr'
       this.recognition.continuous = true
@@ -147,13 +147,13 @@ export default {
       this.recognition.onresult = (event) => {
         for (let i = event.resultIndex; i < event.results.length; ++i) {
           if (event.results[i].isFinal) {
-            console.log('rec res: ', event.results[i][0].transcript)
+            // console.log('rec res: ', event.results[i][0].transcript)
             this.transcript.push(event.results[i][0].transcript)
           }
         }
       }
       this.recognition.onerror = (event) => {
-        console.log('eeee: ', event)
+        // console.log('eeee: ', event)
         this.transcript.push('Error: ' + event)
       }
     },
