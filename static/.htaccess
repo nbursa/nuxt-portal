@@ -1,0 +1,7 @@
+RewriteCond %{HTTPS} !on
+RewriteCond %{HTTP_HOST} ^(www\.)?nenadbursac\.com$
+RewriteRule ^(.*)$ https://nenadbursac.com/$1 [R=301,L]
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>

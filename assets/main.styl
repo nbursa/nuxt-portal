@@ -1,0 +1,84 @@
+@import './typography'
+@import './colors'
+@import './animate'
+@import './global'
+@import './elements'
+@import './components'
+
+//body
+  //&::-webkit-scrollbar
+  //  width 5px
+  //&::-webkit-scrollbar-track
+  //  background transparent
+  //&::-webkit-scrollbar-thumb
+  //  background #95cbf1
+  //  border-radius 5px
+  //  &:hover
+  //    background #7EC0EE
+
+#__nuxt
+  width 100vw
+  height 100vh
+  overflow hidden
+  cursor none
+  scroll-behavior smooth
+  animation NegGradient 15s ease infinite
+  position relative
+  #__layout
+    position absolute
+    top 0
+    left 0
+    width 100vw
+    height 100vh
+    overflow hidden
+    overflow-y auto
+    scroll-behavior smooth
+    &::-webkit-scrollbar
+      width 15px
+    &::-webkit-scrollbar-track
+      background transparent
+    &::-webkit-scrollbar-thumb
+      background #95cbf1
+      border-radius 5px
+      &:hover
+        background darken(#95cbf1, 50%)
+  .cursor
+    position fixed
+    top -50px
+    left -50px
+    width 20px
+    height 20px
+    transition 0 ease-out
+    animation pulsing 1s infinite alternate
+    border 3px solid $cursor
+    border-radius 50%
+    pointer-events none
+    z-index 3
+    &.input-hover
+      border 1px solid rgba(255, 255, 255, 0.75)
+      border-radius 0
+      width 0
+      height 25px
+      animation none
+    &.btn-hover
+      border 10px solid rgba(255, 255, 255, 0.5)
+      animation none
+    &.card-hover
+      border 10px solid rgba(255, 255, 255, 0.75)
+      animation none
+
+  @keyframes pulsing
+    from
+      transform scale(0.7)
+      opacity 1
+    to
+      transform scale(1)
+      opacity 0.8
+
+  @keyframes pulsing2
+    from
+      transform scale(1)
+      opacity 1
+    to
+      transform scale(1.2)
+      opacity 0.8

@@ -1,0 +1,18 @@
+main 
+  padding: 0
+  position: relative
+  height 100%
+  overflow hidden
+  overflow-y auto
+  scroll-behavior smooth
+  &::-webkit-scrollbar
+    width 10px
+    transition all .25s ease-in
+    &:hover
+      background rgba(255, 255, 255, .5)
+  &::-webkit-scrollbar-track
+    background transparent
+  &::-webkit-scrollbar-thumb
+    background alpha($textColor, .5)
+  &::-webkit-scrollbar-thumb:hover
+    background $textColor

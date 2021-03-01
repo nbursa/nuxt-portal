@@ -1,0 +1,41 @@
+.news {
+    margin-top: 50vh;
+
+    @media screen and (max-height: 500px) {
+
+        top: 10vh;
+        padding-bottom: 30vh;
+
+        button {
+            bottom: 25vh;
+        }
+
+    }
+
+    @media screen and (max-width: 768px) {
+
+        margin-top: 55vh;
+
+    }
+
+    .input-field {
+        max-width: 50vw;
+
+        input {
+            pointer-events: all;
+            cursor: none;
+        }
+    }
+
+    button {
+        right: 0;
+        float: right;
+        pointer-events: all;
+        cursor: none;
+    }
+
+    .form-messages {
+        padding: 20px 40px;
+        font-weight: 600;
+    }
+}

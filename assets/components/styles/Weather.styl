@@ -1,0 +1,137 @@
+.weather-container {
+  position: relative;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  margin: 50vh auto 50px;
+  transform: translateY(-40%);
+  text-align: center;
+
+  h2,
+  h4,
+  h5 {
+    display: inline;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.8em;
+    font-weight: 300;
+    font-style: italic;
+    text-transform: lowercase;
+    letter-spacing: 0.1em;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+
+    span {
+      font-weight: 300;
+      font-size: 64px;
+    }
+
+    img {
+      vertical-align: text-bottom;
+    }
+  }
+
+  h4 {
+    font-size: 1.4em;
+  }
+
+  h5 {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-right: 10px;
+
+    span {
+      font-size: 1em;
+      font-weight: 400;
+    }
+  }
+
+  .weather-content {
+    display: flex;
+    flex: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a {
+      cursor: none;
+    }
+
+    h2 {
+      width: 100%;
+      justify-content: center;
+      display: block;
+      margin-bottom: 30px;
+    }
+
+    .left-column {
+      width: 300px;
+      background-color: rgba(black, 0.5);
+      padding: 20px;
+      border-radius: 5px 5px 0 0;
+
+      @media (min-width: 857px) and (max-width: 870px) {
+        border-radius: 5px 0 0 5px;
+      }
+
+      @media (min-width: 871px) {
+        margin-right: 10px;
+        border-radius: 5px 0 0 5px;
+      }
+
+      h3 {
+        margin: 0;
+      }
+
+      .desc {
+        margin: -10px;
+
+        @media (max-width: 857px) {
+          margin: 11px;
+        }
+      }
+    }
+
+    .right-column {
+      width: 300px;
+      background-color: rgba(black, 0.5);
+      padding: 20px;
+      border-radius: 0 0 5px 5px;
+
+      @media (min-width: 857px) and (max-width: 870px) {
+        border-radius: 0 5px 5px 0;
+      }
+
+      @media (min-width: 871px) {
+        border-radius: 0 5px 5px 0;
+      }
+
+      p:first-child {
+        margin: 0;
+      }
+
+      h4 {
+        display: block;
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+    h6 {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .weather-container {
+    width: 90%;
+    transform: translateY(-30%);
+  }
+}

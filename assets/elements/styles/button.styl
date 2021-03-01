@@ -1,0 +1,63 @@
+.btn
+  background none
+  border 0
+  box-sizing border-box
+  margin 1em
+  // background-color rgba(216, 236, 250, 0.1)
+  color $textColor
+  //font-size inherit
+  position relative
+  text-align center
+  vertical-align middle
+  font-family "Josefin Sans", sans-serif
+  //font-size 1.3rem
+  font-size 1.3vw
+  padding 1rem 2.5rem
+  outline none
+  overflow hidden
+  line-height 25px
+  transition color 0.25s
+
+  &:before,
+  &:after
+    box-sizing inherit
+    content ""
+    position absolute
+    //width 100%
+    //height 100%
+    border 2px solid transparent
+    border-radius 3px
+    width 0
+    height 0
+
+  &:before
+    bottom 0
+    left 0
+
+  &:after
+    top 0
+    right 0
+
+  &:hover
+    box-shadow inset 0 0 0 2px rgba(216, 236, 250, 0)
+
+    &:before,
+    &:after
+      width 100%
+      height 100%
+    
+    &:before
+      border-bottom-color $textColor
+      border-right-color $textColor
+      transition width 0.25s ease-out, height 0.25s ease-out 0.25s
+
+    &:after
+      border-top-color $textColor
+      border-left-color $textColor
+      transition border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s
+
+  @media screen and (max-width 550px)
+    margin 5vw auto
+    border 2px solid
+    padding 2vw 10vw
+    font-size 22px

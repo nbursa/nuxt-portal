@@ -1,0 +1,119 @@
+.openpop 
+  &:after 
+    display: block
+    content: ""
+    width: 100%
+    height: 1px
+    bottom: 0
+    left: 0
+    background-color: rgba(216, 236, 250, 0.75)
+    visibility: hidden
+    transform: scaleX(0)
+    transform-origin: left bottom
+    transition: 0.3s ease-out
+
+  &:hover:after,
+  &:focus:after,
+  &:active:after 
+    visibility: visible
+    transform: scaleX(1)
+    transform-origin: left bottom
+
+input 
+  &[type=text],
+  &[type=email] 
+    font-family: Josefin Sans
+    background-color: transparent
+    border: none
+    border-bottom: 1px solid #d8ecfa
+    border-radius: 0
+    outline: none
+    height: 50px
+    width: 100%
+    font-size: 1.5rem
+    margin: 20px 0 0 0
+    padding: 0
+    box-shadow: none
+    box-sizing: content-box
+    transition: 0.25s ease-out
+    position: relative
+    color: #d8ecfa
+    
+
+
+textarea 
+  font-family: Josefin Sans
+  background-color: transparent
+  border: none
+  border-bottom: 1px solid #d8ecfa
+  border-radius: 0
+  outline: none
+  height: 50px
+  width: 100%
+  font-size: 1.5rem
+  margin: 20px 0 0 0
+  padding: 0
+  box-shadow: none
+  box-sizing: content-box
+  transition: 0.25s ease-out
+  position: relative
+  color: #d8ecfa
+
+.chbox 
+  width: 20px
+  position: relative
+  margin-left: 0px
+  display: inline-block
+  margin-top: 2rem
+  pointer-events: all
+  cursor: none
+
+
+.chbox-label 
+  display: inline-block
+  margin-left: 2rem
+  margin-top: 2rem
+
+
+.chbox 
+  width: 20px
+  position: relative
+  margin-left: 0px
+  margin: 20px
+  color: rgba(255, 250, 250, 0.7)
+
+  label 
+    width: 20px
+    height: 20px
+    position: absolute
+    top: 0
+    left: 0
+    background-color: rgba(216, 236, 250, 0.25)
+    border: 1px solid rgba(216, 236, 250, 0.6)
+
+    &:after 
+      content: ""
+      width: 9px
+      height: 5px
+      position: absolute
+      top: 4px
+      left: 4px
+      border: 3px solid #d8ecfa
+      border-top: none
+      border-right: none
+      background: transparent
+      opacity: 0
+      transform: rotate(-45deg)
+    
+    &:hover::after
+      opacity: 0.3
+
+  input[type=checkbox] 
+    visibility: hidden
+
+    &:checked+label:after 
+      opacity: 1
+        
+    
+
+
