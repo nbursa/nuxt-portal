@@ -106,12 +106,11 @@ export default {
         this.errorMessage = 'Name is required, must have at least 3 characters.'
         return
       }
-      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       console.log('test: ', re.test(String(this.form.mail).toLowerCase()))
       if (!this.form.mail) {
         this.formErrors.email = true
-        this.errorMessage =
-          'Email is required.'
+        this.errorMessage = 'Email is required.'
         return
       } else if (!re.test(String(this.form.mail).toLowerCase())) {
         this.formErrors.email = true

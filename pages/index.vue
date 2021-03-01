@@ -28,8 +28,8 @@
 <script>
 // import sound from '@/static/sounds/click-sound.mp3'
 import { translate } from '@/plugins/translate'
-import Hello from './Hello'
 import { mapState, mapActions } from 'vuex'
+import Hello from './Hello'
 
 export default {
   name: 'Home',

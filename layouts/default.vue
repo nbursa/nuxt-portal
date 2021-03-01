@@ -1,6 +1,6 @@
 <template lang="pug">
   #app
-    .cursor
+    .cursor(v-if="haveMouse")
     //Nuxt
     AppHeader(
       :header-is-dark="headerIsDark"
