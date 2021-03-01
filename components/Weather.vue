@@ -45,7 +45,8 @@ export default {
   },
   methods: {
     loadWeather() {
-      const requestString = `https://api.openweathermap.org/data/2.5/weather?lat=${this.lat}&lon=${this.lon}&units=metric&APPID=e4331cc37f866b6b58af862892bb0263`
+      const id = process.env.WEATHER_ID
+      const requestString = `https://api.openweathermap.org/data/2.5/weather?lat=${this.lat}&lon=${this.lon}&units=metric&APPID=${id}`
       axios
         .get(requestString)
         .then((res) => {
