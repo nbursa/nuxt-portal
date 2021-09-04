@@ -6,11 +6,11 @@
       h1.animated.bounceInDown Nenad Bursa&cacute;
     .home-content
       h2.animated.bounceInLeft Frontend Developer
-      a.enter-btn.btn.animated.bounceInRight(
-        @click="ctaClick",
-        @mouseover="btnOver",
-        @mouseleave="btnLeave"
-      ) {{$translation('home.work')}}
+      //- a.enter-btn.btn.animated.bounceInRight(
+      //-   @click="ctaClick",
+      //-   @mouseover="btnOver",
+      //-   @mouseleave="btnLeave"
+      //- ) {{$translation('home.work')}}
     .home-actions.animated.bounceInRight
       //.action
       //  a.cv(@mouseover="btnOver()",

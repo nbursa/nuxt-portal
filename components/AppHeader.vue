@@ -110,7 +110,7 @@ export default {
     },
     setPages() {
       this.$router.options.routes.forEach((route) => {
-        if (['contact', 'work'].includes(route.name)) {
+        if (['contact'].includes(route.name)) {
           this.pages.push({
             path: route.path,
             name: route.name,
