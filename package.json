@@ -28,7 +28,7 @@
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.17.3",
     "nuxt": "^2.14.12",
-    "nuxt-mail": "^1.0.3",
+    "nuxt-mail": "^3.0.16",
     "vee-validate": "^4.4.11"
   },
   "devDependencies": {
