@@ -1017,21 +1017,24 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@dword-design/functions@^1.1.6":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@dword-design/functions/-/functions-1.2.0.tgz#fa4ed4643a4f801f0f984d09bcef32c3b71afffb"
-  integrity sha512-TE6zdexGjlj6t5CaVtfh28rTSdQOOxhmRzkj0++cc7G4xe3dJ3xVvT9k6O0ECrPnHOMypkoCcXOo5SNFmBUQRw==
+"@dword-design/endent@^1.0.0":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@dword-design/endent/-/endent-1.0.1.tgz#847c775fb721142a5d3673b2e0ef383850e1040f"
+  integrity sha512-F8xRP8hTVd8JclhvmZskVN6QMLMge+kYCPOZ2Xsx7FJbs2dyD9J1cwDNsBAVujBfK2aKeznI/eqbHVK2XxCA2g==
   dependencies:
-    endent dword-design/endent#fork
+    dedent "github:dword-design/dedent#fork"
+    fast-json-parse "^1.0.3"
+    objectorarray "^1.0.3"
+
+"@dword-design/functions@^4.0.0":
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/@dword-design/functions/-/functions-4.0.7.tgz#678a0402c2890c6061a9605df0ac7153c06be469"
+  integrity sha512-Q225czTokHcXIUhe+yVlHuhnETdfKyJptNAfg2LnoB/HXUxQyb76+kwpBzwlldOQ7FJl+RDATj4zTRBh4puesA==
+  dependencies:
+    "@dword-design/endent" "^1.0.0"
+    delay "^5.0.0"
     lodash "^4.17.15"
     tinycolor2 "^1.4.1"
-
-"@dword-design/nuxt-push-plugins@^1.0.2":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@dword-design/nuxt-push-plugins/-/nuxt-push-plugins-1.0.7.tgz#224e9a1c2ebd3302f83f9773aac82ca9fe3b3986"
-  integrity sha512-bUUKbozeZKrgHkaywsC8ooIYEi3GILoihHuCaaJ14vhtvXWyvEM/S2P1624cyAp3QH5ePU1FBQ7GkJrGZ44Uyg==
-  dependencies:
-    "@dword-design/functions" "^1.1.6"
 
 "@eslint/eslintrc@^0.4.3":
   version "0.4.3"
@@ -3984,7 +3987,7 @@ decode-uri-component@^0.2.0:
   resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
   integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
 
-dedent@^0.7.0, dedent@dword-design/dedent#fork:
+dedent@^0.7.0, "dedent@github:dword-design/dedent#fork":
   version "0.7.0"
   resolved "https://codeload.github.com/dword-design/dedent/tar.gz/c8d46e5017d60504657c2d01b59082c0329a12a7"
   dependencies:
@@ -4038,6 +4041,11 @@ defu@^3.2.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/defu/-/defu-3.2.2.tgz#be20f4cc49b9805d54ee6b610658d53894942e97"
   integrity sha512-8UWj5lNv7HD+kB0e9w77Z7TdQlbUYDVWqITLHNqFIn6khrNHv5WQo38Dcm1f6HeNyZf0U7UbPf6WeZDSdCzGDQ==
+
+delay@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/delay/-/delay-5.0.0.tgz#137045ef1b96e5071060dd5be60bf9334436bd1d"
+  integrity sha512-ReEBKkIfe4ya47wlPYf/gu5ib6yUG0/Aez0JQZQz94kiWtRQvZIQbTiehsnwHvLSWJnQdhVeqYue7Id1dKr0qw==
 
 depd@~1.1.2:
   version "1.1.2"
@@ -4254,14 +4262,6 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0:
   integrity sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==
   dependencies:
     once "^1.4.0"
-
-endent@dword-design/endent#fork:
-  version "1.4.0"
-  resolved "https://codeload.github.com/dword-design/endent/tar.gz/be5433db67eaec07c6c9d00ba3bed2ed946dc664"
-  dependencies:
-    dedent dword-design/dedent#fork
-    fast-json-parse "^1.0.3"
-    objectorarray "^1.0.3"
 
 enhanced-resolve@^4.0.0, enhanced-resolve@^4.1.1, enhanced-resolve@^4.5.0:
   version "4.5.0"
@@ -7496,14 +7496,22 @@ num2fraction@^1.2.2:
   resolved "https://registry.yarnpkg.com/num2fraction/-/num2fraction-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"
   integrity sha1-b2gragJ6Tp3fpFZM0lidHU5mnt4=
 
-nuxt-mail@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/nuxt-mail/-/nuxt-mail-1.0.3.tgz#4a0d3ee3399860aef754a476b4cb946c8f144ecd"
-  integrity sha512-Q/UqLVDBcAwW7TLVMtNcm2qL1Ch7FKC143G+BJpQhEx3byMTu30SemNE4I9NnYcT0OKE9957EL0vq3Zr02i+wA==
+nuxt-mail@^3.0.17:
+  version "3.0.17"
+  resolved "https://registry.yarnpkg.com/nuxt-mail/-/nuxt-mail-3.0.17.tgz#bfb8513a890057ec5da28b3441de067532987935"
+  integrity sha512-Qlq5o+8XhVaL1F5mhHBVqU5zaQRQjc2Ns9VXlrClL3JCQbvC+xXS/nGaDVacPMSIxTObr3Y69U/Uwt4yq3804g==
   dependencies:
-    "@dword-design/nuxt-push-plugins" "^1.0.2"
+    "@dword-design/functions" "^4.0.0"
     express "^4.17.1"
     nodemailer "^6.4.11"
+    nuxt-push-plugins "^2.0.0"
+
+nuxt-push-plugins@^2.0.0:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/nuxt-push-plugins/-/nuxt-push-plugins-2.0.8.tgz#753607192b70e582c1e5da191326558b2228dfee"
+  integrity sha512-GnPdZZLDJrKn7B3amSLc6d2gPuyNSDs1RkwwlCvtN2WKPfJZ7XB3LB8fjAcRSq/7N1+YhZxSgifycgO+QMb2+g==
+  dependencies:
+    "@dword-design/functions" "^4.0.0"
 
 nuxt@^2.14.12:
   version "2.15.2"
