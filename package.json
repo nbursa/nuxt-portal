@@ -1,12 +1,12 @@
 {
-  "name": "baby-app",
-  "version": "1.0.0",
+  "name": "nenad-portal",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
     "lint": "yarn lint:js && yarn lint:style"
@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.11.1",
-    "@nuxt/typescript-runtime": "^2.1.0",
     "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.17.3",
@@ -53,7 +52,7 @@
     "pug": "^3.0.1",
     "pug-plain-loader": "^1.1.0",
     "sass": "^1.32.8",
-    "sass-loader": "12",
+    "sass-loader": "^10.1.1",
     "stylelint": "^13.9.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",

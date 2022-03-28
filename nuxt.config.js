@@ -116,12 +116,21 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    // nuxt-mail config
     [
       'nuxt-mail',
       {
+        message: [
+          { name: 'contact', to: process.env.MAIL_TO },
+        ],
         smtp: {
+          // service: process.env.MAIL_SERVICE,
+          // auth: {
+          //   user: process.env.MAIL_TO,
+          //   pass: process.env.MAIL_KEY,
+          // },
           host: process.env.MAIL_HOST,
-          port: 465,
+          port: process.env.MAIL_PORT,
           auth: {
             user: process.env.MAIL_USER,
             pass: process.env.MAIL_KEY,
@@ -150,7 +159,7 @@ export default {
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
+  // content: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

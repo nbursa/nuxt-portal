@@ -2,66 +2,72 @@
 .contact
   .form-body
     form.form.animated.bounceInLeft
-      h2 {{ $translation('contact.title') }}
+      h2 {{ $translation("contact.title") }}
       .form-inputs
         .input__field
-          input.form-inputs__field-input.in-fi(
-            v-model="form.name",
-            type="text",
-            name="name",
-            id="name",
-            data-errormessage-value-missing="Required",
-            data-errormessage-type-mismatch="Too short",
-            placeholder="",
+          input#name.form-inputs__field-input.in-fi(
+            v-model='form.name',
+            type='text',
+            name='name',
+            data-errormessage-value-missing='Required',
+            data-errormessage-type-mismatch='Too short',
+            placeholder='',
             required,
-            @mouseenter="inputHoverEvent",
-            @mouseleave="inputLeaveEvent"
+            @mouseenter='inputHoverEvent',
+            @mouseleave='inputLeaveEvent'
           )
-          .error(v-if="formErrors.name") {{ errorMessage }}
-          label.name(for="name" :class="{ 'in-focus': form.name && form.name.length }") {{ $translation('contact.form_name') }}
+          .error(v-if='formErrors.name') {{ errorMessage }}
+          label.name(
+            for='name',
+            :class='{ "in-focus": form.name && form.name.length }'
+          ) {{ $translation("contact.form_name") }}
         .input__field
-          input.form-inputs__field-input.in-fi(
-            v-model="form.mail",
-            type="email",
-            name="mail",
-            id="mail",
-            placeholder=" ",
+          input#mail.form-inputs__field-input.in-fi(
+            v-model='form.mail',
+            type='email',
+            name='mail',
+            placeholder=' ',
             required,
-            @mouseenter="inputHoverEvent",
-            @mouseleave="inputLeaveEvent"
+            @mouseenter='inputHoverEvent',
+            @mouseleave='inputLeaveEvent'
           )
-          .error(v-if="formErrors.email") {{ errorMessage }}
-          label.mail(for="mail" :class="{ 'in-focus': form.mail && form.mail.length }") {{ $translation('contact.form_email') }}
+          .error(v-if='formErrors.email') {{ errorMessage }}
+          label.mail(
+            for='mail',
+            :class='{ "in-focus": form.mail && form.mail.length }'
+          ) {{ $translation("contact.form_email") }}
         .input__field
-          textarea.form-inputs__field-textarea.in-fi(
-            v-model="form.message",
-            name="message",
-            cols="50",
-            rows="4",
-            id="message",
-            placeholder=" ",
-            required="",
-            @mouseenter="inputHoverEvent",
-            @mouseleave="inputLeaveEvent"
-            data-gramm_editor="false"
-            :class="{'have-content': form.message && form.message.length }"
+          textarea#message.form-inputs__field-textarea.in-fi(
+            v-model='form.message',
+            name='message',
+            cols='50',
+            rows='4',
+            placeholder=' ',
+            required='',
+            @mouseenter='inputHoverEvent',
+            @mouseleave='inputLeaveEvent',
+            data-gramm_editor='false',
+            :class='{ "have-content": form.message && form.message.length }'
           )
-          .error(v-if="formErrors.message") {{ errorMessage }}
-          label.message(for="message" :class="{ 'in-focus': form.message && form.message.length }") {{ $translation('contact.form_message') }}
+          .error(v-if='formErrors.message') {{ errorMessage }}
+          label.message(
+            for='message',
+            :class='{ "in-focus": form.message && form.message.length }'
+          ) {{ $translation("contact.form_message") }}
   .form-controls.animated.bounceInRight
     a.btn(
-      type="submit",
-      @click.prevent="submitForm()",
-      @mouseover="hoverEvent",
-      @mouseleave="leaveEvent"
-    ) {{ $translation('contact.form_send') }}
-    .form-messages(ref="formReport")
-    .inline
-      NuxtLink.link.openpop(
-        to="/request",
-        @mouseover.native="hoverEvent",
-        @mouseleave.native="leaveEvent"
-      ) {{ $translation('contact.form_contact') }}
+      type='submit',
+      @click.prevent='submitForm()',
+      @mouseover='hoverEvent',
+      @mouseleave='leaveEvent'
+    ) {{ $translation("contact.form_send") }}
+    .form-messages(ref='formReport')
+    //- .inline
+    //-   NuxtLink.link.openpop(
+    //-     to='/request',
+    //-     @mouseover.native='hoverEvent',
+    //-     @mouseleave.native='leaveEvent'
+    //-   ) {{ $translation("contact.form_contact") }}
 </template>
 
 <script>
@@ -106,7 +112,8 @@ export default {
         this.errorMessage = 'Name is required, must have at least 3 characters.'
         return
       }
-      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      const re =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       // console.log('test: ', re.test(String(this.form.mail).toLowerCase()))
       if (!this.form.mail) {
         this.formErrors.email = true
@@ -124,10 +131,11 @@ export default {
         return
       }
       this.$nuxt.$axios
-        .$post(process.env.MAIL_URL, {
+        .$post('/mail/send', {
+          config: 'contact',
           from: process.env.MAIL_FROM,
           subject: 'Message from nenadbursac.com',
-          text: JSON.stringify(this.form),
+          text: `New contact message from "${this.form.name}, <${this.form.mail}>":\n\n${this.form.message}`,
           to: process.env.MAIL_TO,
         })
         .then((response) => {
@@ -154,25 +162,30 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import "~@/assets/components/styles/Contact.styl"
+@import '~@/assets/components/styles/Contact.styl'
 
 .contact
   padding 20px
   margin-top 50vh
   transform translateY(-50%)
+
   .form-body
     margin-bottom 50px
+
     .input__field
       position relative
+
       .error
         color red
+
       textarea
         margin-top 50px
         height 50px
-        &:focus,
-        &.have-content
+
+        &:focus, &.have-content
           height auto
           min-height 50px
+
       label
         font-size 10px
         transform scale(1.5) translateY(0)
@@ -180,29 +193,31 @@ export default {
         position absolute
         bottom 30px
         left 0px
-        transition bottom .25s ease-out, transform .15s ease-in
-      label.in-focus,
-      input:focus + label
+        transition bottom 0.25s ease-out, transform 0.15s ease-in
+
+      label.in-focus, input:focus + label
         bottom 60px
         transform scale(1) translateY(0)
-      textarea + label.in-focus,
-      textarea:focus + label
+
+      textarea + label.in-focus, textarea:focus + label
         top 0
         bottom auto
         transform scale(1) translateY(0)
+
   .form-controls
     .form-messages
       margin 40px 0 20px
-  .in-fi,
-  .btn,
-  .link
+
+  .in-fi, .btn, .link
     cursor none
+
   .inline
     display inline-block
+
   .in-fi
     margin-bottom 10px
 
-  @media screen and (min-width: 550px)
+  @media screen and (min-width 550px)
     max-width 400px
     margin 50vh auto 0
 </style>
