@@ -109,7 +109,7 @@ export default {
       this.screenSize = window.innerWidth
     },
     setPages() {
-      console.log('router: ', this.$router.options.routes)
+      // console.log('router: ', this.$router.options.routes)
       this.$router.options.routes.forEach((route) => {
         if (['contact', 'weather', 'work'].includes(route.name)) {
           this.pages.push({
