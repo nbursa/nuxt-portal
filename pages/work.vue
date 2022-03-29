@@ -306,7 +306,7 @@ export default {
       .project .card
         padding 0
     @media screen and (min-width: 551px) and (max-width: 768px)
-      width 90vw
+      // width 90vw
       margin-top 150px
       margin-bottom 150px
       h2

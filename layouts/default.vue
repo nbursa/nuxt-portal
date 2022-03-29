@@ -9,6 +9,7 @@
       @linkLeave="leaveEvent"
     )
     NuxtChild(
+      class="router-wrapper"
       :position="currentScrollPosition"
       :font-size="fontSize"
       @cardOver="hoverEvent"

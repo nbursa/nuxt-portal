@@ -112,7 +112,7 @@ footer
   width 100vw
   height 50px
   padding 0 40px
-  z-index 2
+  // z-index 2
   transition all 0.25s ease-in-out
   background-size 400% 400%
   animation Gradient 15s ease infinite

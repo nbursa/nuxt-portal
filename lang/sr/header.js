@@ -5,5 +5,6 @@ export default {
   contact: 'Kontakt',
   weather: 'Vreme',
   'not-found': 'Not Found',
-  news: 'Novosti'
+  news: 'Novosti',
+  home: 'Pocetna'
 }

@@ -1,32 +1,23 @@
 @import "colors.styl"
 @import "animate.styl"
 @import "typography.styl"
-//@import "./css/ionicons.min.css"
 
 [v-cloak]
   display none
 html
+  // font-size 1vw
+  font-size 18px
+  font-family "Josefin Sans"
+  font-weight 300
   overflow-x hidden
   height auto
   min-height 100%
   position relative
   cursor crosshair
-  //&::webkit-scrollbar
-  //  width 5px
-  //&::webkit-scrollbar-track
-  //  background transparent
-  //&::webkit-scrollbar-thumb
-  //  background #95cbf1
-  //  border-radius 5px
-  //  &:hover
-  //    background #7EC0EE
   *
     box-sizing border-box
   body
     overflow hidden
-    font-size 1vw
-    font-family "Josefin Sans"
-    font-weight 300
     color $textColor
     width 100vw
     height 100vh
@@ -39,6 +30,6 @@ html
       color $textColor
       &hover .cursor
         border-color red
-    @media screen and (max-width: 550px)
-      font-size 20px
+    // @media screen and (max-width: 550px)
+    //   font-size 20px
 

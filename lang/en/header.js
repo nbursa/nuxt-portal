@@ -4,4 +4,5 @@ export default {
   weather: 'Weather',
   'not-found': 'Not Found',
   news: 'News',
+  home: 'Home'
 }

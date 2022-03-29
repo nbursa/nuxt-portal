@@ -81,6 +81,9 @@ export default {
   mixins: [translate],
   data() {
     return {
+      env: {
+        baseUrl: ''
+      },
       form,
       formErrors: {
         name: false,
@@ -92,6 +95,9 @@ export default {
   },
   mounted() {
     this.$el.scrollTo(0, 0)
+    // console.log('ENV: ', process.env.$env)
+    if (process.env.$baseUrl) this.env.baseUrl = process.env.$baseUrl
+    // this.env = process.env | 'no env'
   },
   methods: {
     hoverEvent(e) {
@@ -134,9 +140,9 @@ export default {
         .$post('/mail/send', {
           config: 'contact',
           from: process.env.MAIL_FROM,
+          to: process.env.MAIL_TO,
           subject: 'Message from nenadbursac.com',
           text: `New contact message from "${this.form.name}, <${this.form.mail}>":\n\n${this.form.message}`,
-          to: process.env.MAIL_TO,
         })
         .then((response) => {
           if (response === 'OK') {
@@ -163,61 +169,4 @@ export default {
 
 <style lang="stylus" scoped>
 @import '~@/assets/components/styles/Contact.styl'
-
-.contact
-  padding 20px
-  margin-top 50vh
-  transform translateY(-50%)
-
-  .form-body
-    margin-bottom 50px
-
-    .input__field
-      position relative
-
-      .error
-        color red
-
-      textarea
-        margin-top 50px
-        height 50px
-
-        &:focus, &.have-content
-          height auto
-          min-height 50px
-
-      label
-        font-size 10px
-        transform scale(1.5) translateY(0)
-        transform-origin top left
-        position absolute
-        bottom 30px
-        left 0px
-        transition bottom 0.25s ease-out, transform 0.15s ease-in
-
-      label.in-focus, input:focus + label
-        bottom 60px
-        transform scale(1) translateY(0)
-
-      textarea + label.in-focus, textarea:focus + label
-        top 0
-        bottom auto
-        transform scale(1) translateY(0)
-
-  .form-controls
-    .form-messages
-      margin 40px 0 20px
-
-  .in-fi, .btn, .link
-    cursor none
-
-  .inline
-    display inline-block
-
-  .in-fi
-    margin-bottom 10px
-
-  @media screen and (min-width 550px)
-    max-width 400px
-    margin 50vh auto 0
 </style>
