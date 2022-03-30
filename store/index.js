@@ -27,6 +27,11 @@ const state = () => ({
   },
   animationItems: ['hello', 'this', 'website', 'is', 'about', 'route'],
   activeEl: 'hello',
+  user: {
+    name: '',
+    key: '',
+    isAuthorized: false,
+  },
 })
 
 export { state, actions, mutations, getters }

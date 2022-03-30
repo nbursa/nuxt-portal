@@ -17,7 +17,7 @@
           >
         </li>
         <Transition name="slide-fade" appear>
-          <li class="nav-container" v-if="screenSize <= 550 && navOpen">
+          <li class="nav-container" v-if="screenSize <= 768 && navOpen">
             <ul class="nav">
               <li>
                 <a
@@ -47,7 +47,7 @@
             </ul>
           </li>
         </Transition>
-        <li class="nav-container" v-if="screenSize > 550">
+        <li class="nav-container" v-if="screenSize > 768">
           <ul class="nav">
             <li v-for="page in pages" :key="page.name">
               <a
@@ -122,7 +122,8 @@ export default {
     },
     setPages() {
       this.$router.options.routes.forEach((route) => {
-        if (['work', 'contact', 'weather'].includes(route.name)) {
+        // console.log('router', this.$router)
+        if (['work', 'weather'].includes(route.name)) {
           this.pages.push({
             path: route.path,
             name: route.name,
@@ -203,7 +204,7 @@ header
       transition all 0.3s ease-in-out
       flex 100%
       .nav-btn
-        @media screen and (min-width 550px)
+        @media screen and (min-width 768px)
           display none
         .hamburger
           width 43px
@@ -231,20 +232,23 @@ header
         position absolute
         left 50%
         transform translateX(-50%)
+        min-width fit-content
         .nav
           list-style none
           padding 0
           margin-top 10px
           li
             margin 0
-            margin-left 1vw
+            margin-left 1rem
             padding 0
             a
-              font-size 1.4vw
+              font-size 1.5rem
               padding 10px 20px
               display inline-block
               text-align center
               justify-content center
+              @media screen and (min-width 551px) and (max-width 1210px)
+                font-size 1rem
               @media screen and (max-width 550px)
                 font-size 1.5rem
           .close-btn
@@ -264,7 +268,7 @@ header
               transform rotate(45deg)
             &:after
               transform rotate(-45deg)
-        @media screen and (max-width 550px)
+        @media screen and (max-width 768px)
           display flex
           flex 1
           align-items center
@@ -288,7 +292,7 @@ header
             justify-self center
       .home-link
         font-size 3.8vw
-        @media screen and (max-width 550px)
+        @media screen and (max-width 768px)
           display none
         a
           padding 10px 20px
@@ -300,7 +304,7 @@ header
             height 20px
             margin-left 3px
             border-radius 5px
-  @media screen and (max-width 550px)
+  @media screen and (max-width 768px)
     z-index 1
     transition all 0.25s ease-in-out
     .wrap

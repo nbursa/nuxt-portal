@@ -183,12 +183,14 @@ footer
     padding 0 20px
     text-align center
     .social-share
-      display none
-      position fixed
-      top 15px
-      right 25px
-      bottom auto
-      left auto
+      // display none
+      // position fixed
+      // bottom 15px
+      // right 25px
+      // top auto
+      // left auto
+      // color #1a84cf
+      margin-left auto
       height auto
       transform translate(0, 0)
       z-index 1000 !important

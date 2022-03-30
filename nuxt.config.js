@@ -3,9 +3,21 @@ export default {
   target: 'static',
   env: {
     $env: '',
-    // $baseUrl: 'http://localhost:3000',
     $baseUrl: 'https://nenadbursac.com',
     $lng: 'en',
+    GA_ID: 'UA-70419632-4',
+    BROWSER_BASE_URL: 'https://nenadbursac.com',
+    WEATHER_ID: 'e4331cc37f866b6b58af862892bb0263',
+    MAIL_URL: '/mail/send',
+    MAIL_FROM: 'nenad@nenadbursac.com',
+    MAIL_TO: 'nenad@nenadbursac.com',
+    MAIL_HOST: 'mail.nenadbursac.com',
+    MAIL_PORT: 465,
+    MAIL_USER: 'nenad@nenadbursac.com',
+    MAIL_KEY: 'eFge4yip9eBcs4r',
+    MAIL_SERVICE: 'gmail',
+    admin: 'test',
+    admin_key: 'test'
   },
   head: {
     title: 'Nenad Bursać - Frontend Developer',
@@ -97,6 +109,7 @@ export default {
   css: [],
   plugins: ['~/plugins/translate.js'],
   components: true,
+  middleware: ['auth'],
   buildModules: [
     '@nuxt/typescript-build',
     '@nuxtjs/stylelint-module',
@@ -111,7 +124,9 @@ export default {
     [
       'nuxt-mail',
       {
-        message: [{ name: 'contact', to: process.env.MAIL_TO }],
+        message: [
+          { name: 'contact', to: process.env.MAIL_TO, cc: '', bcc: '' },
+        ],
         smtp: {
           // service: process.env.MAIL_SERVICE,
           // auth: {
@@ -120,6 +135,9 @@ export default {
           // },
           host: process.env.MAIL_HOST,
           port: process.env.MAIL_PORT,
+          to: process.env.MAIL_TO,
+          cc: '',
+          bcc: '',
           auth: {
             user: process.env.MAIL_USER,
             pass: process.env.MAIL_KEY,
@@ -128,6 +146,9 @@ export default {
       },
     ],
   ],
+  axios: {
+    baseURL: process.env.BASE_URL,
+  },
   privateRuntimeConfig: {
     axios: {
       baseURL: process.env.$baseUrl,
@@ -157,8 +178,10 @@ export default {
       id: process.env.GA_ID,
     },
     axios: {
-      baseURL: process.env.$baseUrl,
-      browserBaseURL: process.env.$baseUrl,
+      baseURL:
+        process.env.$baseUrl | process.env.BASE_URL | 'https://nenadbursac.com',
+      browserBaseURL:
+        process.env.$baseUrl | process.env.BASE_URL | 'https://nenadbursac.com',
     },
   },
 }

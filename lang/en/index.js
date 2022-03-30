@@ -5,5 +5,6 @@ import header from './header'
 import footer from './footer'
 import home from './home'
 import request from './request'
+import login from './login'
 
-export default { contact, work, hello, header, footer, home, request }
+export default { contact, work, hello, header, footer, home, request, login }

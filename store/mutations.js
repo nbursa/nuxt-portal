@@ -13,4 +13,12 @@ export default {
     const { item, display } = payload
     state.displayState[item] = display
   },
+  LOGIN(state, payload) {
+    // console.log('LOGIN: ', payload)
+    const { name, password } = payload
+    state.user.name = name
+    state.user.key = password
+    state.user.isAuthorized = true
+    // dispatch('redirect')
+  },
 }

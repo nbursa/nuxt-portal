@@ -265,11 +265,13 @@ export default {
           padding 20px
           h3
             margin-top 0
+            font-size 30px
             @media screen and (max-width: 550px)
               font-size 20px !important
           p
             text-align left
             margin-bottom 15px
+            font-size 20px
             @media screen and (max-width: 550px)
               font-size 22px !important
           a

@@ -16,4 +16,12 @@ export default {
   setDisplay({ commit }, payload) {
     commit('SET_DISPLAY', payload)
   },
+  login({ commit }, payload) {
+    const { name, password } = payload
+    // console.log('login: ', payload, process.env.admin, process.env.admin_key)
+    if (name === process.env.admin && password === process.env.admin_key) {
+      return commit('LOGIN', payload)
+    }
+    return
+  },
 }
