@@ -16,9 +16,16 @@ export default {
   LOGIN(state, payload) {
     // console.log('LOGIN: ', payload)
     const { name, password } = payload
-    state.user.name = name
-    state.user.key = password
+    localStorage.setItem('user', JSON.stringify(payload))
+    // state.user.name = name
+    // state.user.key = password
     state.user.isAuthorized = true
     // dispatch('redirect')
   },
+  LOGOUT(state) {
+    localStorage.removeItem('user')
+    // state.user.name = ""
+    // state.user.key = ""
+    state.user.isAuthorized = false
+  }
 }

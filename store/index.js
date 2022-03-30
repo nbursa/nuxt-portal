@@ -29,7 +29,7 @@ const state = () => ({
   activeEl: 'hello',
   user: {
     name: '',
-    key: '',
+    // key: '',
     isAuthorized: false,
   },
 })

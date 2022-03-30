@@ -50,6 +50,7 @@ export default {
       fontSize: 0,
       haveMouse: false,
       enableSpeech: false,
+      username: ''
     }
   },
   computed: {

@@ -56,7 +56,7 @@ import { thisExpression } from '@babel/types'
 const form = new FormModel('', '')
 
 export default {
-  name: 'Contact',
+  name: 'Login',
   mixins: [translate],
   data() {
     return {
@@ -73,6 +73,9 @@ export default {
     }
   },
   mounted() {
+    if (this.$store.state.user.isAuthorized) {
+      return this.$router.push('/documents')
+    }
     this.$el.scrollTo(0, 0)
     if (process.env.$baseUrl) this.env.baseUrl = process.env.$baseUrl
   },
@@ -93,7 +96,7 @@ export default {
       console.log(this.$store, this.form)
       this.$store.dispatch('login', this.form).then(() => {
         if (this.$store.state.user.isAuthorized) {
-          this.$router.push('/documents')
+          return this.$router.push('/documents')
         }
         this.authError = true
         this.errorMessage = 'Not authorized!'

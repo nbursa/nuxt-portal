@@ -24,4 +24,7 @@ export default {
     }
     return
   },
+  logout({ commit }) {
+    commit('LOGOUT')
+  }
 }
