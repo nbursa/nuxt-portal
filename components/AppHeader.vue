@@ -264,7 +264,7 @@ header
       background-color transparent
       margin 0
       list-style none
-      padding 0 40px
+      padding 0 2vw
       transition all 0.3s ease-in-out
       flex 100%
       width 100%
@@ -311,10 +311,11 @@ header
           list-style none
           padding 0
           margin-top 10px
+          text-align center
 
           li
             margin 0
-            margin-left 1rem
+            // margin-left 1rem
             padding 0
 
             a
@@ -325,15 +326,15 @@ header
               justify-content center
 
               @media screen and (min-width 551px) and (max-width 1210px)
-                font-size 1rem
+                font-size 1.5rem
 
               @media screen and (max-width 550px)
                 font-size 1.5rem
 
           .close-btn
             position fixed
-            top 32px
-            left 45px
+            top 2.5vh
+            left 2vw
             width 30px
             height 30px
 
@@ -399,7 +400,9 @@ header
 
     .wrap
       .header-nav
-        padding 0 40px
+        padding 0 0 0 2vw
+        .lang
+          margin-right 3.5vw
 
         > li
           &.home-link
