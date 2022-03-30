@@ -5,8 +5,8 @@
       <a
         class="openpop"
         :href="`${publicPath}/docs/NenadBursac-cv.pdf`"
-        @mouseover.native="linkOver"
-        @mouseleave.native="linkLeave"
+        @mouseover="linkOver"
+        @mouseleave="linkLeave"
         download
         >Download</a
       >
@@ -29,6 +29,14 @@ export default {
       // publicPath: 'http://localhost:3000',
     }
   },
+  methods: {
+    linkOver(e) {
+      this.$emit('linkOver', e)
+    },
+    linkLeave(e) {
+      this.$emit('linkLeave', e)
+    },
+  }
 }
 </script>
 
