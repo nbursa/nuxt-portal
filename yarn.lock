@@ -1521,9 +1521,9 @@
     mustache "^2.3.0"
     stack-trace "0.0.10"
 
-"@pdftron/webviewer@^8.3.3":
-  version "8.3.3"
-  resolved "https://registry.npmjs.org/@pdftron/webviewer/-/webviewer-8.3.3.tgz"
+"@pdftron/webviewer@^8.12.0":
+  version "8.12.0"
+  resolved "https://registry.yarnpkg.com/@pdftron/webviewer/-/webviewer-8.12.0.tgz#00f297c6f6e9a0e0958321e49e3220a44d048a92"
 
 "@polka/url@^1.0.0-next.9":
   version "1.0.0-next.11"
