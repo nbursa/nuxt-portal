@@ -27,7 +27,7 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^3.3.5",
     "@pdftron/webviewer": "^8.3.3",
-    "core-js": "^3.17.3",
+    "core-js": "^3.29.0",
     "nuxt": "^2.14.12",
     "nuxt-mail": "^3.0.23",
     "vee-validate": "^4.4.11"
