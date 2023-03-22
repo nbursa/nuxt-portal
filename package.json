@@ -50,7 +50,7 @@
     "fiber": "^1.0.4",
     "husky": "^8.0.3",
     "lint-staged": "^10.5.3",
-    "prettier": "^2.2.1",
+    "prettier": "^2.8.6",
     "pug": "^3.0.1",
     "pug-plain-loader": "^1.1.0",
     "sass": "^1.58.0",
