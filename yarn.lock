@@ -800,16 +800,17 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@commitlint/cli@^16.2.3":
-  version "16.2.3"
-  resolved "https://registry.npmjs.org/@commitlint/cli/-/cli-16.2.3.tgz"
+"@commitlint/cli@^17.6.3":
+  version "17.6.3"
+  resolved "https://registry.yarnpkg.com/@commitlint/cli/-/cli-17.6.3.tgz#a02194a2bb6efe4e681eda2addd072a8d02c9497"
   dependencies:
-    "@commitlint/format" "^16.2.1"
-    "@commitlint/lint" "^16.2.1"
-    "@commitlint/load" "^16.2.3"
-    "@commitlint/read" "^16.2.1"
-    "@commitlint/types" "^16.2.1"
-    lodash "^4.17.19"
+    "@commitlint/format" "^17.4.4"
+    "@commitlint/lint" "^17.6.3"
+    "@commitlint/load" "^17.5.0"
+    "@commitlint/read" "^17.5.1"
+    "@commitlint/types" "^17.4.4"
+    execa "^5.0.0"
+    lodash.isfunction "^3.0.9"
     resolve-from "5.0.0"
     resolve-global "1.0.0"
     yargs "^17.0.0"
@@ -820,130 +821,134 @@
   dependencies:
     conventional-changelog-conventionalcommits "^4.3.1"
 
-"@commitlint/config-validator@^16.2.1":
-  version "16.2.1"
-  resolved "https://registry.npmjs.org/@commitlint/config-validator/-/config-validator-16.2.1.tgz"
+"@commitlint/config-validator@^17.4.4":
+  version "17.4.4"
+  resolved "https://registry.yarnpkg.com/@commitlint/config-validator/-/config-validator-17.4.4.tgz#d0742705719559a101d2ee49c0c514044af6d64d"
   dependencies:
-    "@commitlint/types" "^16.2.1"
-    ajv "^6.12.6"
+    "@commitlint/types" "^17.4.4"
+    ajv "^8.11.0"
 
-"@commitlint/ensure@^16.2.1":
-  version "16.2.1"
-  resolved "https://registry.npmjs.org/@commitlint/ensure/-/ensure-16.2.1.tgz"
+"@commitlint/ensure@^17.4.4":
+  version "17.4.4"
+  resolved "https://registry.yarnpkg.com/@commitlint/ensure/-/ensure-17.4.4.tgz#a36e7719bdb9c2b86c8b8c2e852b463a7bfda5fa"
   dependencies:
-    "@commitlint/types" "^16.2.1"
-    lodash "^4.17.19"
+    "@commitlint/types" "^17.4.4"
+    lodash.camelcase "^4.3.0"
+    lodash.kebabcase "^4.1.1"
+    lodash.snakecase "^4.1.1"
+    lodash.startcase "^4.4.0"
+    lodash.upperfirst "^4.3.1"
 
-"@commitlint/execute-rule@^16.2.1":
-  version "16.2.1"
-  resolved "https://registry.npmjs.org/@commitlint/execute-rule/-/execute-rule-16.2.1.tgz"
+"@commitlint/execute-rule@^17.4.0":
+  version "17.4.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/execute-rule/-/execute-rule-17.4.0.tgz#4518e77958893d0a5835babe65bf87e2638f6939"
 
-"@commitlint/format@^16.2.1":
-  version "16.2.1"
-  resolved "https://registry.npmjs.org/@commitlint/format/-/format-16.2.1.tgz"
+"@commitlint/format@^17.4.4":
+  version "17.4.4"
+  resolved "https://registry.yarnpkg.com/@commitlint/format/-/format-17.4.4.tgz#0f6e1b4d7a301c7b1dfd4b6334edd97fc050b9f5"
   dependencies:
-    "@commitlint/types" "^16.2.1"
-    chalk "^4.0.0"
+    "@commitlint/types" "^17.4.4"
+    chalk "^4.1.0"
 
-"@commitlint/is-ignored@^16.2.1":
-  version "16.2.1"
-  resolved "https://registry.npmjs.org/@commitlint/is-ignored/-/is-ignored-16.2.1.tgz"
+"@commitlint/is-ignored@^17.6.3":
+  version "17.6.3"
+  resolved "https://registry.yarnpkg.com/@commitlint/is-ignored/-/is-ignored-17.6.3.tgz#8e21046558a0339fbf2a33ef0ad7d5a9ae7ff6bc"
   dependencies:
-    "@commitlint/types" "^16.2.1"
-    semver "7.3.5"
+    "@commitlint/types" "^17.4.4"
+    semver "7.5.0"
 
-"@commitlint/lint@^16.2.1":
-  version "16.2.1"
-  resolved "https://registry.npmjs.org/@commitlint/lint/-/lint-16.2.1.tgz"
+"@commitlint/lint@^17.6.3":
+  version "17.6.3"
+  resolved "https://registry.yarnpkg.com/@commitlint/lint/-/lint-17.6.3.tgz#2d9a88b73c44be8b97508c980198a6f289251655"
   dependencies:
-    "@commitlint/is-ignored" "^16.2.1"
-    "@commitlint/parse" "^16.2.1"
-    "@commitlint/rules" "^16.2.1"
-    "@commitlint/types" "^16.2.1"
+    "@commitlint/is-ignored" "^17.6.3"
+    "@commitlint/parse" "^17.4.4"
+    "@commitlint/rules" "^17.6.1"
+    "@commitlint/types" "^17.4.4"
 
-"@commitlint/load@^16.2.3":
-  version "16.2.3"
-  resolved "https://registry.npmjs.org/@commitlint/load/-/load-16.2.3.tgz"
+"@commitlint/load@^17.5.0":
+  version "17.5.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-17.5.0.tgz#be45dbbb50aaf5eb7e8e940e1e0d6171d1426bab"
   dependencies:
-    "@commitlint/config-validator" "^16.2.1"
-    "@commitlint/execute-rule" "^16.2.1"
-    "@commitlint/resolve-extends" "^16.2.1"
-    "@commitlint/types" "^16.2.1"
-    "@types/node" ">=12"
-    chalk "^4.0.0"
-    cosmiconfig "^7.0.0"
-    cosmiconfig-typescript-loader "^1.0.0"
-    lodash "^4.17.19"
+    "@commitlint/config-validator" "^17.4.4"
+    "@commitlint/execute-rule" "^17.4.0"
+    "@commitlint/resolve-extends" "^17.4.4"
+    "@commitlint/types" "^17.4.4"
+    "@types/node" "*"
+    chalk "^4.1.0"
+    cosmiconfig "^8.0.0"
+    cosmiconfig-typescript-loader "^4.0.0"
+    lodash.isplainobject "^4.0.6"
+    lodash.merge "^4.6.2"
+    lodash.uniq "^4.5.0"
     resolve-from "^5.0.0"
-    typescript "^4.4.3"
+    ts-node "^10.8.1"
+    typescript "^4.6.4 || ^5.0.0"
 
-"@commitlint/message@^16.2.1":
-  version "16.2.1"
-  resolved "https://registry.npmjs.org/@commitlint/message/-/message-16.2.1.tgz"
+"@commitlint/message@^17.4.2":
+  version "17.4.2"
+  resolved "https://registry.yarnpkg.com/@commitlint/message/-/message-17.4.2.tgz#f4753a79701ad6db6db21f69076e34de6580e22c"
 
-"@commitlint/parse@^16.2.1":
-  version "16.2.1"
-  resolved "https://registry.npmjs.org/@commitlint/parse/-/parse-16.2.1.tgz"
+"@commitlint/parse@^17.4.4":
+  version "17.4.4"
+  resolved "https://registry.yarnpkg.com/@commitlint/parse/-/parse-17.4.4.tgz#8311b12f2b730de6ea0679ae2a37b386bcc5b04b"
   dependencies:
-    "@commitlint/types" "^16.2.1"
+    "@commitlint/types" "^17.4.4"
     conventional-changelog-angular "^5.0.11"
     conventional-commits-parser "^3.2.2"
 
-"@commitlint/read@^16.2.1":
-  version "16.2.1"
-  resolved "https://registry.npmjs.org/@commitlint/read/-/read-16.2.1.tgz"
+"@commitlint/read@^17.5.1":
+  version "17.5.1"
+  resolved "https://registry.yarnpkg.com/@commitlint/read/-/read-17.5.1.tgz#fec903b766e2c41e3cefa80630040fcaba4f786c"
   dependencies:
-    "@commitlint/top-level" "^16.2.1"
-    "@commitlint/types" "^16.2.1"
-    fs-extra "^10.0.0"
-    git-raw-commits "^2.0.0"
+    "@commitlint/top-level" "^17.4.0"
+    "@commitlint/types" "^17.4.4"
+    fs-extra "^11.0.0"
+    git-raw-commits "^2.0.11"
+    minimist "^1.2.6"
 
-"@commitlint/resolve-extends@^16.2.1":
-  version "16.2.1"
-  resolved "https://registry.npmjs.org/@commitlint/resolve-extends/-/resolve-extends-16.2.1.tgz"
+"@commitlint/resolve-extends@^17.4.4":
+  version "17.4.4"
+  resolved "https://registry.yarnpkg.com/@commitlint/resolve-extends/-/resolve-extends-17.4.4.tgz#8f931467dea8c43b9fe38373e303f7c220de6fdc"
   dependencies:
-    "@commitlint/config-validator" "^16.2.1"
-    "@commitlint/types" "^16.2.1"
+    "@commitlint/config-validator" "^17.4.4"
+    "@commitlint/types" "^17.4.4"
     import-fresh "^3.0.0"
-    lodash "^4.17.19"
+    lodash.mergewith "^4.6.2"
     resolve-from "^5.0.0"
     resolve-global "^1.0.0"
 
-"@commitlint/rules@^16.2.1":
-  version "16.2.1"
-  resolved "https://registry.npmjs.org/@commitlint/rules/-/rules-16.2.1.tgz"
+"@commitlint/rules@^17.6.1":
+  version "17.6.1"
+  resolved "https://registry.yarnpkg.com/@commitlint/rules/-/rules-17.6.1.tgz#dff529b8d1e0455808fe7e3e1fa70617e4eb2759"
   dependencies:
-    "@commitlint/ensure" "^16.2.1"
-    "@commitlint/message" "^16.2.1"
-    "@commitlint/to-lines" "^16.2.1"
-    "@commitlint/types" "^16.2.1"
+    "@commitlint/ensure" "^17.4.4"
+    "@commitlint/message" "^17.4.2"
+    "@commitlint/to-lines" "^17.4.0"
+    "@commitlint/types" "^17.4.4"
     execa "^5.0.0"
 
-"@commitlint/to-lines@^16.2.1":
-  version "16.2.1"
-  resolved "https://registry.npmjs.org/@commitlint/to-lines/-/to-lines-16.2.1.tgz"
+"@commitlint/to-lines@^17.4.0":
+  version "17.4.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/to-lines/-/to-lines-17.4.0.tgz#9bd02e911e7d4eab3fb4a50376c4c6d331e10d8d"
 
-"@commitlint/top-level@^16.2.1":
-  version "16.2.1"
-  resolved "https://registry.npmjs.org/@commitlint/top-level/-/top-level-16.2.1.tgz"
+"@commitlint/top-level@^17.4.0":
+  version "17.4.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/top-level/-/top-level-17.4.0.tgz#540cac8290044cf846fbdd99f5cc51e8ac5f27d6"
   dependencies:
     find-up "^5.0.0"
 
-"@commitlint/types@^16.2.1":
-  version "16.2.1"
-  resolved "https://registry.npmjs.org/@commitlint/types/-/types-16.2.1.tgz"
+"@commitlint/types@^17.4.4":
+  version "17.4.4"
+  resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-17.4.4.tgz#1416df936e9aad0d6a7bbc979ecc31e55dade662"
   dependencies:
-    chalk "^4.0.0"
+    chalk "^4.1.0"
 
-"@cspotcode/source-map-consumer@0.8.0":
-  version "0.8.0"
-  resolved "https://registry.npmjs.org/@cspotcode/source-map-consumer/-/source-map-consumer-0.8.0.tgz"
-
-"@cspotcode/source-map-support@0.7.0":
-  version "0.7.0"
-  resolved "https://registry.npmjs.org/@cspotcode/source-map-support/-/source-map-support-0.7.0.tgz"
+"@cspotcode/source-map-support@^0.8.0":
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/@cspotcode/source-map-support/-/source-map-support-0.8.1.tgz#00629c35a688e05a88b1cda684fb9d5e73f000a1"
   dependencies:
-    "@cspotcode/source-map-consumer" "0.8.0"
+    "@jridgewell/trace-mapping" "0.3.9"
 
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
@@ -1004,6 +1009,10 @@
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@jridgewell/resolve-uri/-/resolve-uri-3.1.0.tgz#2203b118c157721addfe69d47b70465463066d78"
 
+"@jridgewell/resolve-uri@^3.0.3":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@jridgewell/resolve-uri/-/resolve-uri-3.1.1.tgz#c08679063f279615a3326583ba3a90d1d82cc721"
+
 "@jridgewell/set-array@^1.0.1":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@jridgewell/set-array/-/set-array-1.1.2.tgz#7c6cf998d6d20b914c0a55a91ae928ff25965e72"
@@ -1018,6 +1027,13 @@
 "@jridgewell/sourcemap-codec@1.4.14", "@jridgewell/sourcemap-codec@^1.4.10":
   version "1.4.14"
   resolved "https://registry.yarnpkg.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.14.tgz#add4c98d341472a289190b424efbdb096991bb24"
+
+"@jridgewell/trace-mapping@0.3.9":
+  version "0.3.9"
+  resolved "https://registry.yarnpkg.com/@jridgewell/trace-mapping/-/trace-mapping-0.3.9.tgz#6534fd5933a53ba7cbf3a17615e273a0d1273ff9"
+  dependencies:
+    "@jridgewell/resolve-uri" "^3.0.3"
+    "@jridgewell/sourcemap-codec" "^1.4.10"
 
 "@jridgewell/trace-mapping@^0.3.14", "@jridgewell/trace-mapping@^0.3.9":
   version "0.3.17"
@@ -1742,7 +1758,7 @@
   version "1.2.1"
   resolved "https://registry.npmjs.org/@types/minimist/-/minimist-1.2.1.tgz"
 
-"@types/node@*", "@types/node@18.11.18", "@types/node@>=12":
+"@types/node@*", "@types/node@18.11.18":
   version "18.11.18"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.18.tgz#8dfb97f0da23c2293e554c5a50d61ef134d7697f"
 
@@ -2374,7 +2390,7 @@ ajv-keywords@^5.0.0:
   dependencies:
     fast-deep-equal "^3.1.3"
 
-ajv@^6.1.0, ajv@^6.10.0, ajv@^6.10.2, ajv@^6.12.2, ajv@^6.12.4, ajv@^6.12.5, ajv@^6.12.6:
+ajv@^6.1.0, ajv@^6.10.0, ajv@^6.10.2, ajv@^6.12.2, ajv@^6.12.4, ajv@^6.12.5:
   version "6.12.6"
   resolved "https://registry.npmjs.org/ajv/-/ajv-6.12.6.tgz"
   dependencies:
@@ -2383,7 +2399,7 @@ ajv@^6.1.0, ajv@^6.10.0, ajv@^6.10.2, ajv@^6.12.2, ajv@^6.12.4, ajv@^6.12.5, ajv
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-ajv@^8.0.0, ajv@^8.8.0:
+ajv@^8.0.0, ajv@^8.11.0, ajv@^8.8.0:
   version "8.12.0"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-8.12.0.tgz#d1a0527323e22f53562c567c00991577dfbe19d1"
   dependencies:
@@ -3503,12 +3519,9 @@ core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz"
 
-cosmiconfig-typescript-loader@^1.0.0:
-  version "1.0.6"
-  resolved "https://registry.npmjs.org/cosmiconfig-typescript-loader/-/cosmiconfig-typescript-loader-1.0.6.tgz"
-  dependencies:
-    cosmiconfig "^7"
-    ts-node "^10.6.0"
+cosmiconfig-typescript-loader@^4.0.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/cosmiconfig-typescript-loader/-/cosmiconfig-typescript-loader-4.3.0.tgz#c4259ce474c9df0f32274ed162c0447c951ef073"
 
 cosmiconfig@^5.0.0:
   version "5.2.1"
@@ -3529,7 +3542,7 @@ cosmiconfig@^6.0.0:
     path-type "^4.0.0"
     yaml "^1.7.2"
 
-cosmiconfig@^7, cosmiconfig@^7.0.0:
+cosmiconfig@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npmjs.org/cosmiconfig/-/cosmiconfig-7.0.0.tgz"
   dependencies:
@@ -3538,6 +3551,15 @@ cosmiconfig@^7, cosmiconfig@^7.0.0:
     parse-json "^5.0.0"
     path-type "^4.0.0"
     yaml "^1.10.0"
+
+cosmiconfig@^8.0.0:
+  version "8.1.3"
+  resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-8.1.3.tgz#0e614a118fcc2d9e5afc2f87d53cd09931015689"
+  dependencies:
+    import-fresh "^3.2.1"
+    js-yaml "^4.1.0"
+    parse-json "^5.0.0"
+    path-type "^4.0.0"
 
 crc@^3.8.0:
   version "3.8.0"
@@ -4878,9 +4900,9 @@ from2@^2.1.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
 
-fs-extra@^10.0.0:
-  version "10.0.1"
-  resolved "https://registry.npmjs.org/fs-extra/-/fs-extra-10.0.1.tgz"
+fs-extra@^11.0.0:
+  version "11.1.1"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-11.1.1.tgz#da69f7c39f3b002378b0954bb6ae7efdc0876e2d"
   dependencies:
     graceful-fs "^4.2.0"
     jsonfile "^6.0.1"
@@ -5029,9 +5051,9 @@ git-config-path@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/git-config-path/-/git-config-path-2.0.0.tgz"
 
-git-raw-commits@^2.0.0:
-  version "2.0.10"
-  resolved "https://registry.npmjs.org/git-raw-commits/-/git-raw-commits-2.0.10.tgz"
+git-raw-commits@^2.0.11:
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/git-raw-commits/-/git-raw-commits-2.0.11.tgz#bc3576638071d18655e1cc60d7f524920008d723"
   dependencies:
     dargs "^7.0.0"
     lodash "^4.17.15"
@@ -6115,6 +6137,12 @@ js-yaml@^3.11.0, js-yaml@^3.13.1:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
+js-yaml@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-4.1.0.tgz#c1fb65f8f5017901cdd2c951864ba18458a10602"
+  dependencies:
+    argparse "^2.0.1"
+
 jsesc@^2.5.1:
   version "2.5.2"
   resolved "https://registry.npmjs.org/jsesc/-/jsesc-2.5.2.tgz"
@@ -6324,6 +6352,10 @@ lodash._reinterpolate@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz"
 
+lodash.camelcase@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
+
 lodash.clonedeep@^4.5.0:
   version "4.5.0"
   resolved "https://registry.npmjs.org/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz"
@@ -6331,6 +6363,14 @@ lodash.clonedeep@^4.5.0:
 lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.npmjs.org/lodash.debounce/-/lodash.debounce-4.0.8.tgz"
+
+lodash.isfunction@^3.0.9:
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/lodash.isfunction/-/lodash.isfunction-3.0.9.tgz#06de25df4db327ac931981d1bdb067e5af68d051"
+
+lodash.isplainobject@^4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
 
 lodash.kebabcase@^4.1.1:
   version "4.1.1"
@@ -6343,6 +6383,18 @@ lodash.memoize@^4.1.2:
 lodash.merge@^4.6.2:
   version "4.6.2"
   resolved "https://registry.npmjs.org/lodash.merge/-/lodash.merge-4.6.2.tgz"
+
+lodash.mergewith@^4.6.2:
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.2.tgz#617121f89ac55f59047c7aec1ccd6654c6590f55"
+
+lodash.snakecase@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.snakecase/-/lodash.snakecase-4.1.1.tgz#39d714a35357147837aefd64b5dcbb16becd8f8d"
+
+lodash.startcase@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/lodash.startcase/-/lodash.startcase-4.4.0.tgz#9436e34ed26093ed7ffae1936144350915d9add8"
 
 lodash.template@^4.5.0:
   version "4.5.0"
@@ -6364,6 +6416,10 @@ lodash.truncate@^4.4.2:
 lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.npmjs.org/lodash.uniq/-/lodash.uniq-4.5.0.tgz"
+
+lodash.upperfirst@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/lodash.upperfirst/-/lodash.upperfirst-4.3.1.tgz#1365edf431480481ef0d1c68957a5ed99d49f7ce"
 
 lodash@^4.15.0, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.3, lodash@^4.17.5:
   version "4.17.21"
@@ -9024,9 +9080,9 @@ semver@7.0.0:
   version "7.0.0"
   resolved "https://registry.npmjs.org/semver/-/semver-7.0.0.tgz"
 
-semver@7.3.5:
-  version "7.3.5"
-  resolved "https://registry.npmjs.org/semver/-/semver-7.3.5.tgz"
+semver@7.5.0:
+  version "7.5.0"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.0.tgz#ed8c5dc8efb6c629c88b23d41dc9bf40c1d96cd0"
   dependencies:
     lru-cache "^6.0.0"
 
@@ -9977,11 +10033,11 @@ ts-loader@^8.0.17:
     micromatch "^4.0.0"
     semver "^7.3.4"
 
-ts-node@^10.6.0:
-  version "10.7.0"
-  resolved "https://registry.npmjs.org/ts-node/-/ts-node-10.7.0.tgz"
+ts-node@^10.8.1:
+  version "10.9.1"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-10.9.1.tgz#e73de9102958af9e1f0b168a6ff320e25adcff4b"
   dependencies:
-    "@cspotcode/source-map-support" "0.7.0"
+    "@cspotcode/source-map-support" "^0.8.0"
     "@tsconfig/node10" "^1.0.7"
     "@tsconfig/node12" "^1.0.7"
     "@tsconfig/node14" "^1.0.0"
@@ -9992,7 +10048,7 @@ ts-node@^10.6.0:
     create-require "^1.1.0"
     diff "^4.0.1"
     make-error "^1.1.1"
-    v8-compile-cache-lib "^3.0.0"
+    v8-compile-cache-lib "^3.0.1"
     yn "3.1.1"
 
 ts-pnp@^1.1.6:
@@ -10083,9 +10139,9 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz"
 
-typescript@^4.4.3:
-  version "4.6.2"
-  resolved "https://registry.npmjs.org/typescript/-/typescript-4.6.2.tgz"
+"typescript@^4.6.4 || ^5.0.0":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.0.4.tgz#b217fd20119bd61a94d4011274e0ab369058da3b"
 
 typescript@~4.2:
   version "4.2.3"
@@ -10340,9 +10396,9 @@ utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/utils-merge/-/utils-merge-1.0.1.tgz"
 
-v8-compile-cache-lib@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/v8-compile-cache-lib/-/v8-compile-cache-lib-3.0.0.tgz"
+v8-compile-cache-lib@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/v8-compile-cache-lib/-/v8-compile-cache-lib-3.0.1.tgz#6336e8d71965cb3d35a1bbb7868445a7c05264bf"
 
 v8-compile-cache@^2.0.3, v8-compile-cache@^2.3.0:
   version "2.3.0"
