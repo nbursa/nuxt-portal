@@ -33,7 +33,7 @@
     "vee-validate": "^4.4.11"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.3",
+    "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^13.1.0",
     "@nuxt/types": "^2.16.0",
     "@nuxt/typescript-build": "^2.1.0",
